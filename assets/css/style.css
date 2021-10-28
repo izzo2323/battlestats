@@ -1,7 +1,16 @@
+
 body {
-  background-image: linear-gradient(180deg, #240046, #3C096C);
+    background-color: #3C096C;
+  }
+header nav {
+  float: right;
+  margin: 7 px 0;
 }
-header h1 {
+header nav ul li {
+  display: inline;
+}
+
+.BattleStats {
     font-weight: bold;
     font-style: italic;
     font-size: 36px;
