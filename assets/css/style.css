@@ -2,8 +2,18 @@
 body {
     background-color: #3C096C;
   }
-header nav {
-  float: right;
+
+header h1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
   margin: 7 px 0;
 }
 header nav ul li {
