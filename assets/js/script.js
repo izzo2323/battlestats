@@ -1,42 +1,42 @@
-var steamAPI = function(userID, playerSummary, playerStats) {
+var steamAPI = function(playerSummary) {
 
 	// var steamKey = "4F3B76E047AA7DDB2C31FE9E7A61DD0E"
 	// var userID = '76561198024405122'
 	// var userStats = 'http://api.steampowered.com/ISteamUserStats/GetUserStatsForGame/v0002/?appid=440&key=${steamKey}&steamid=${userID}'
 
-	var playerSummary =  'http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=4F3B76E047AA7DDB2C31FE9E7A61DD0E&steamids=76561198024405122'
+	var playerSummary =  'https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=4F3B76E047AA7DDB2C31FE9E7A61DD0E&steamids=76561198024405122'
 
 	// var userAchievements = 'http://api.steampowered.com/ISteamUserStats/GetPlayerAchievements/v0001/?appid=440&key=${steamKey}&steamid=${userID}'
 
-	// fetch(userStats)
+	fetch(playerSummary)
 
-	// .then(function (response) {
-	// 	if (response.ok) {
-	// 		console.log(response);
-	// 		response.json()
+	.then(function (response) {
+		if (response.ok) {
+			console.log("Resonse OK", response);
+			response.json()
 
-	// 		console.log(userStats);
+			console.log(playerSummary);
 
 	
-	// 	}
-	// })
+		}
+	})
 
-	return fetch(playerSummary, {
+	console.log("Inside Stream api ", playerSummary); 
+
+	fetch(playerSummary, {
+		// mode: 'no-cors',
+		method: 'GET', 
+		credentials: 'same-origin',
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+			'Access-Control-Allow-Origin': '*',
         },
     }).then(response => {
-        console.log(response)
+        console.log(response.body)
         return response.json()
     }).then(data => {
         console.log(data);
-        // var videoId = data.items[0].id.videoId
-        // var videoUrl = 'https://www.youtube.com/watch?v=' + videoId
-        // var ytLink = document.createElement("a")
-        // var link2Text = document.createTextNode("Game Tutorial")
-        // ytLink.appendChild(link2Text)
-        // ytLink.href = videoUrl
-        // card.append(ytLink)
+
     }).catch(error => {
         console.error(error);
     });
