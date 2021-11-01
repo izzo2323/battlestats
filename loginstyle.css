@@ -38,6 +38,7 @@ section {
     font-style: italic;
     font-size: 24px;
     margin: 0;
+    color: #ff8500;
 }
 .login-input {
     border: 1px solid #ff8500;
