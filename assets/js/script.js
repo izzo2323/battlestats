@@ -1,17 +1,13 @@
-//upon loading the page
-
-
-
 var steamAPI = playerSummary => {
 
+
+
 	var steamKey = "4F3B76E047AA7DDB2C31FE9E7A61DD0E"
-	var userID = document.getElementById('user-input');
+	var userID = document.getElementById('#input').value;
 
 console.log(userID)
 
-	var playerSummary =  
-	
-	"https://cors-anywhere.herokuapp.com/https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=4F3B76E047AA7DDB2C31FE9E7A61DD0E&steamids=$(userID)"
+	var playerSummary = "https://cors-anywhere.herokuapp.com/https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=4F3B76E047AA7DDB2C31FE9E7A61DD0E&steamids=$(userID)"
 
 	console.log("Inside Stream api ", playerSummary); 
 
@@ -35,6 +31,4 @@ console.log(userID)
 
 steamAPI();
 
-localStorage.setItem(userID);
 
-console.log(localStorage);
