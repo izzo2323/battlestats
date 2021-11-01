@@ -1,4 +1,5 @@
 
+
 body {
     background-color: #3C096C;
     background-image: linear-gradient(180deg,#3C096C, #240046);
@@ -137,7 +138,7 @@ body {
 
 #dp-dots li:hover {
   cursor: pointer;
-  background: goldenrod;
+  background: #fff;
   transition: background 0.2s;
 }
 
