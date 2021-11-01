@@ -1,5 +1,6 @@
 // animation - t
 
+
 $(document).ready(function () {
 	function detect_active() {
 	  // get active

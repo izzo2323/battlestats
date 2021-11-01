@@ -19,14 +19,18 @@ header nav ul {
 }
 header nav ul li {
   display: inline;
+  flex-wrap: wrap;
+  justify-content: left;
 }
 
 .BattleStats {
     font-weight: bold;
-    font-style: italic;
+    font-style: normal;
     font-size: 36px;
     color: #ff8500;
     margin: 0;
+    font-family: sans-serif;
+    }
 }
 
 
