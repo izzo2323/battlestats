@@ -68,10 +68,10 @@ header nav ul li {
             margin-right: auto;
             margin-top: none;
             margin-bottom: none;
-            border-top: 4px solid #00ccff;
-            border-bottom-left-radius: 15px;
-            border-bottom-right-radius: 15px;
-            background-color: #575757;
+            border-bottom: 4px solid #FF8500;
+            border-bottom-left-radius: 200px;
+            border-bottom-right-radius: 200px;
+            background: linear-gradient(#5A189A, #3C096C);
             
 }
 
