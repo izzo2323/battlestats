@@ -1,12 +1,7 @@
-
-
-
 var steamAPI = playerSummary => {
 
 	var steamKey = "4F3B76E047AA7DDB2C31FE9E7A61DD0E"
 	var userID = "76561198024405122"
-
-
 
 	var playerSummary =  
 	
@@ -32,5 +27,10 @@ var steamAPI = playerSummary => {
     });
 	};
 
+
+steamAPI();
+}
+
+console.log(userStats);
 
 steamAPI();
