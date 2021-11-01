@@ -1,157 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-US">
 <head>
-
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./assets/css/style.css" />
-  <link href="/assets/css/style.css" rel="stylesheet">
-  <title>BattleStats</title>
-
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Light Theme</title>
+<link href="css/singlePageTemplate.css" rel="stylesheet" type="text/css">
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
+<script>var __adobewebfontsappname__="dreamweaver"</script>
+<script src="http://use.edgefonts.net/source-sans-pro:n2:default.js" type="text/javascript"></script>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
-<!-- fix <head> tags? -->
 <body>
-  <!-- navigation -->
-
-  <header>
-
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="assets/css/style.css"  media="screen,projection"/>
-
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-
-
-    <h1>
-      <a class="BattleStats" href="/">
-        BattleStats
-      </a>
-    </h1>
-
-    <!-- RANDOM CODE BELOW -->
-
-    <!-- <div class="navbar">
-  <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
-  <a href="#"><i class="fa fa-fw fa-search"></i> Search</a>
-  <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a> 
-  <a href="#"><i class="fa fa-fw fa-user"></i> Login</a> -->
+<!-- Main Container -->
+<div class="container"> 
+  <!-- Navigation -->
+  <header> <a href="">
+    <h4 class="logo">BattleStats&nbsp;</h4>
+    </a>
     <nav>
-
-      <!-- Unordered list element -->
       <ul>
-        <!-- List item element-->
-        <li>
-          <!-- Anchor element -->
-          <a class="XBOX" href="xbox.html">X-BOX</a>
-        </li>
-        <li>
-          <a class="Steam" href="steam.html">Steam</a>
-        </li>
-        <li>
-          <a class="Playstation" href="playstation.html">Playstation
-          </a>
-        </li>
+        <li><a href="#hero">STEAM</a></li>
+        <li><a href="#about">XB</a>OX<a>&nbsp;</a></li>
+        <li> <a href="#contact">PLAYSTATION</a></li>
       </ul>
     </nav>
-
   </header>
-
-  <!-- animation -->
-
-  <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-
-<div id="slider">
-  <div class="dp-wrap">
-    <div id="dp-slider">
-
-      <div class="dp_item" data-class="1" data-position="1">
-        <div class="dp-content">
-
-          <h2>XBOX</h2>
-          <a href="#" class="site-btn">Log In</a>
-        </div>
-        <div class="dp-img">
-          <img class="img-fluid" src="assets/images/xbox-logo.svg" alt="investing">
-        </div>
-      </div>
-
-      <div class="dp_item" data-class="2" data-position="2">
-        <div class="dp-content">
-          <h2>Steam</h2>
-          <p></p>
-          <a href="#" class="site-btn">Log in</a>
-        </div>
-        <div class="dp-img">
-          <img class="img-fluid" src="assets/images/steam-icon.svg" alt="investing">
-        </div>
-      </div>
-
-      <div class="dp_item" data-class="3" data-position="3">
-        <div class="dp-content">
-
-          <h2>Playstation</h2>
-          <p></p>
-          <a href="#" class="site-btn">Log In</a>
-        </div>
-        <div class="dp-img">
-          <img class="img-fluid" src="assets/images/playstation-round.svg" alt="investing">
-        </div>
-      </div>
-
-    <span id="dp-next">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51.401 51.401">
-        <defs>
-          <style>
-            .cls-1 {
-              fill: none;
-              stroke: gold;
-              stroke-miterlimit: 10;
-              stroke-width: 7px;
-            }
-          </style>
-        </defs>
-        <path id="Rectangle_4_Copy" data-name="Rectangle 4 Copy" class="cls-1" d="M32.246,0V33.178L0,31.953" transform="translate(0.094 25.276) rotate(-45)" />
-      </svg>
-    </span>
-
-    <span id="dp-prev">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51.401 51.401">
-        <defs>
-          <style>
-            .cls-1 {
-              fill: none;
-              stroke: gold;
-              stroke-miterlimit: 10;
-              stroke-width: 7px;
-            }
-          </style>
-        </defs>
-        <path id="Rectangle_4_Copy" data-name="Rectangle 4 Copy" class="cls-1" d="M32.246,0V33.178L0,31.953" transform="translate(0.094 25.276) rotate(-45)" />
-      </svg>
-    </span>
-
-    <ul id="dp-dots">
-      <li data-class="1" class="active"></li>
-      <li data-class="2"></li>
-      <li data-class="3"></li>
-      <li data-class="4"></li>
-    </ul>
-  </div>
-</div> -->
-
-<!-- end of animation -->
-
-
-
-  <script src = "assets/js/script.js"></script>
-    </div>
-  
-
-
-  </body>
-  </html>
-
-  
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <h2 class="hero_header">BATTLE&nbsp; <span class="light">STATS</span></h2>
+    <p class="tagline">one site for all of your gaming stats&nbsp; &nbsp;</p>
+  </section>
+  <!-- About Section -->
+  <!-- Stats Gallery Section -->
+  <!-- Parallax Section -->
+  <!-- More Info Section -->
+  <footer>
+    <article class="footer_column">
+      <h3>PLATFORMS&nbsp;</h3>
+<img src="assets/images/playstation-icon.svg" alt="" class="cards"/><img src="assets/images/steam-icon.svg" alt="" class="cards"/><img src="assets/images/xbox-logo.svg" alt="" class="cards"/>    </article>
+    <article class="footer_column">
+      <h3>INFO</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla </p>
+    </article>
+  </footer>
+  <!-- Footer Section -->
+  <section class="footer_banner" id="contact">
+    <h2 class="hidden">Footer Banner Section </h2>
+    <p class="hero_header">LOG IN&nbsp;</p>
+    <div class="button">sign up</div>
+  </section>
+  <!-- Copyrights Section -->
+  <div class="copyright">&copy;2021- <strong>Battlestats&nbsp;</strong></div>
+</div>
+<!-- Main Container Ends -->
+</body>
+</html>
