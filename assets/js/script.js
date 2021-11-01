@@ -1,11 +1,22 @@
+//upon loading the page
+$(document).ready(function () {
+    $('select').formSelect();
+    savedSearches.innerHTML = ""
+    var savedParameters = JSON.parse(window.localStorage.getItem("savedParameters")) || []
+    populateHistory(savedParameters)
+});
+
+
 var steamAPI = playerSummary => {
 
 	var steamKey = "4F3B76E047AA7DDB2C31FE9E7A61DD0E"
-	var userID = "76561198024405122"
+	var userID = document.getElementById('user-input');
+
+console.log(userID)
 
 	var playerSummary =  
 	
-	"https://cors-anywhere.herokuapp.com/https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key='steamKey'&steamids=76561198024405122"
+	"https://cors-anywhere.herokuapp.com/https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=4F3B76E047AA7DDB2C31FE9E7A61DD0E&steamids=userID"
 
 	console.log("Inside Stream api ", playerSummary); 
 
@@ -14,7 +25,7 @@ var steamAPI = playerSummary => {
 		credentials: 'same-origin',
         headers: {
             'Content-Type': 'application/hal+json',
-			'origin': 'https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=4F3B76E047AA7DDB2C31FE9E7A61DD0E&steamids=76561198024405122'
+			'origin': 'https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=4F3B76E047AA7DDB2C31FE9E7A61DD0E&steamids=userID'
         },
     }).then(response => {
         // console.log(response)
@@ -26,11 +37,5 @@ var steamAPI = playerSummary => {
         console.error(error);
     });
 	};
-
-
-steamAPI();
-}
-
-console.log(userStats);
 
 steamAPI();
