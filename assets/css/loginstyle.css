@@ -3,6 +3,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  background-color: #3c096c;
+}
+header {
+  background-color: #3c096c;
+  color: #ff8500;
+  text-align: center;
+}
 section {
   padding: 60px;
 }
