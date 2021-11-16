@@ -60,7 +60,7 @@ var steamAPI = (playerSummary) => {
   var userID = document.getElementById("username").value;
   console.log("UserID is:", userID);
   var playerSummary = `https://cors-anywhere.herokuapp.com/https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=4F3B76E047AA7DDB2C31FE9E7A61DD0E&steamids=${userID}`;
-  console.log("Inside Stream api ", playerSummary);
+  console.log("Inside Steam api ", playerSummary);
   fetch(playerSummary, {
     method: "GET",
     credentials: "same-origin",
@@ -128,6 +128,7 @@ var steamAPI = (playerSummary) => {
     });
 };
 steamAPI();
+
 var searchBtn = document.getElementsByClassName("btn");
 console.log("btn", searchBtn[0]);
 searchBtn[0].addEventListener("click", (event) => {
