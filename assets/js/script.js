@@ -1,5 +1,5 @@
 // animation - t
-
+console.log("LoadingScript.js file ");
 $(document).ready(function () {
   function detect_active() {
     // get active
@@ -55,9 +55,12 @@ $(document).ready(function () {
   });
 });
 
+console.log("Loading STEAM API ");
+
 var steamAPI = (playerSummary) => {
   var steamKey = "4F3B76E047AA7DDB2C31FE9E7A61DD0E";
-  var userID = document.getElementById("username").value;
+  // var userID = document.getElementById("username").value;
+  var userID = "76561198024405122"; //temp changes
   console.log("UserID is:", userID);
   var playerSummary = `https://cors-anywhere.herokuapp.com/https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=4F3B76E047AA7DDB2C31FE9E7A61DD0E&steamids=${userID}`;
   console.log("Inside Steam api ", playerSummary);
@@ -75,6 +78,13 @@ var steamAPI = (playerSummary) => {
     })
     .then((data) => {
       console.log("Player SUmmmary Data", data);
+
+      console.log("PersonaState is ", data.response.players[0].personastate);
+      console.log("Avatar is ", data.response.players[0].avatar);
+      console.log("Persona Name is ", data.response.players[0].personaname);
+      // var imgEL = document.getElementById("personaAvatar");
+      // imgEL.setAttribute("src", data.response.players[0].avatar);
+
       ///Steam API - Get Player Games
       var getPlayerGamesList = `https://cors-anywhere.herokuapp.com/https://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?&include_appinfo=true&include_played_free_games=true&key=${steamKey}&steamid=${userID}&format=json`;
       fetch(getPlayerGamesList, {
@@ -127,6 +137,7 @@ var steamAPI = (playerSummary) => {
       console.error(error);
     });
 };
+
 steamAPI();
 
 var searchBtn = document.getElementsByClassName("btn");
