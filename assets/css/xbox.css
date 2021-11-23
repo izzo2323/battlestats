@@ -1,0 +1,17 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;   
+}
+header {
+    background-color: #107C10 ;
+    color: black;
+}
+
+header h1 {
+    text-align: center;
+}
