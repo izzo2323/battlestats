@@ -18,7 +18,7 @@ var steamAPI = (playerSummary) => {
         return response.json();
       })
       .then((data) => {
-        console.log("Player SUmmmary Data", data);
+        console.log("Player Summary Data", data);
 
 
 
