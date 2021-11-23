@@ -176,6 +176,10 @@ ul li:hover a {
 	margin-bottom: 0px;
 	margin-left: 0px;
 }
+
+.platformicons {
+	text-align: center;
+}
 /* More info */
 footer {
 	background-color: #FFFFFF;
@@ -282,8 +286,9 @@ footer {
 	float: none;
 	display: none;
 }
-header nav ul {
-}
+
+/* header nav ul {
+} */
 nav ul li {
 	margin-top: 0px;
 	margin-right: 0px;
