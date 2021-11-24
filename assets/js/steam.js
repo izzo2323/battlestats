@@ -1,5 +1,5 @@
 var steamAPI = (playerSummary) => {
-    var steamKey = "4F3B76E047AA7DDB2C31FE9E7A61DD0E";
+    // var steamKey = "4F3B76E047AA7DDB2C31FE9E7A61DD0E";
     // var userID = document.getElementById("username").value;
     var userID = "76561198024405122"; //temp changes
     // console.log("UserID is:", userID);
@@ -10,6 +10,7 @@ var steamAPI = (playerSummary) => {
       credentials: "same-origin",
       headers: {
         "Content-Type": "application/hal+json",
+        // origin: {playerSummary}
         origin: `http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=4F3B76E047AA7DDB2C31FE9E7A61DD0E&steamids=${userID}`,
       },
     })
@@ -20,28 +21,30 @@ var steamAPI = (playerSummary) => {
       .then((data) => {
         console.log("Player Summary Data", data);
 
+    var steamKey = "4F3B76E047AA7DDB2C31FE9E7A61DD0E";
+    var userID = "76561198024405122";
 
 
-        var personastateEl = data.response.players[0].personastate (personastateEl => {
-
+        var personastateEl = data.response.players[0].personastate
+        var updatedState = ""
         if (personastateEl = 0){
-            return ("Offline")
+            updatedState = "Offline"
         } else if (personastateEl = 1) {
-            return("Online")
+          updatedState = "Online"
         } else if (personastateEl = 2 ) {
-            return("Busy")
+          updatedState = "Busy"
         } else if (personastateEl = 3) {
-            return("Away")
+          updatedState = "Away"
         } else if (personastateEl = 4) {
-            return("Snooze")
+          updatedState = "Snooze"
         } else if (personastateEl = 5) {
-            return("Looking to Trade")
+          updatedState = "Looking to Trade"
         } else if (personastateEl = 6) {
-            return("Looking to Play")
-        }});
+          updatedState = "Looking to Play"
+        };
         
         
-        console.log("PersonaState is ", personastateEl);
+        console.log("PersonaState is ", updatedState);
 
 
         var personaNameEl = data.response.players[0].personaname;
@@ -96,6 +99,11 @@ var steamAPI = (playerSummary) => {
               return playerGamesListData[4];
             }
             console.log(playerGamesListData[4]);
+            // this player is online
+            var display = document.getElementById ("player")
+  display.innerHTML = `<p>This player is ${updatedState}</p>
+                      <p>Player Name: ${personaNameEl}
+  `
           })
           .catch((error) => {
             console.error(error);
@@ -126,3 +134,4 @@ var steamAPI = (playerSummary) => {
 //     console.log(event);
 //     steamAPI();
 // });
+
