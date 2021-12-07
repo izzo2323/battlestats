@@ -1,0 +1,57 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+	font-family: source-sans-pro;
+	background-color: black;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	font-style: normal;
+	font-weight: 200;
+}
+header {
+    background-color: #107C10 ;
+    color: black;
+}
+
+header h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.battlestats {
+    font-family: paladins;
+    justify-content: flex-start;
+}
+
+.Achievements {
+    background-color: black;
+    color: #107C10;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.Game-list {
+    background-color: black;
+    color: #107C10;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.Play-Time {
+    background-color: black;
+    color: #107C10;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+footer {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    background-color: #107C10;
+    color: black;
+    font-size: 20px;
+}
