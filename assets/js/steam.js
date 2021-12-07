@@ -1,8 +1,15 @@
+var userID = ""
+function Login(e){
+  e.preventDefault()
+  userID = document.getElementById("Username").value;
+  steamAPI(userID)
+}
 var steamAPI = (playerSummary) => {
+  // preston steamkey 76561199006162307
     // var steamKey = "4F3B76E047AA7DDB2C31FE9E7A61DD0E";
-    // var userID = document.getElementById("username").value;
-    var userID = "76561198024405122"; //temp changes
-    // console.log("UserID is:", userID);
+    // var userID = "76561198024405122"; //temp changes
+  
+    console.log("UserID is:", userID);
     var playerSummary = `https://cors-anywhere.herokuapp.com/https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=4F3B76E047AA7DDB2C31FE9E7A61DD0E&steamids=${userID}`;
     // console.log("Inside Steam api ", playerSummary);
     fetch(playerSummary, {
@@ -22,7 +29,7 @@ var steamAPI = (playerSummary) => {
         console.log("Player Summary Data", data);
 
     var steamKey = "4F3B76E047AA7DDB2C31FE9E7A61DD0E";
-    var userID = "76561198024405122";
+    // var userID = "76561198024405122";
 
 
         var personastateEl = data.response.players[0].personastate
@@ -78,28 +85,29 @@ var steamAPI = (playerSummary) => {
             //   );
             //76561198024405122
             //Sorting data in an Array to show top played games
-            var sorted = playerGamesListData.response.games.sort(function (
-              productA,
-              productB
-            ) {
-              if (productA.playtime_forever > productB.playtime_forever) {
-                return -1;
-              }
-              if (productB.playtime_forever > productA.playtime_forever) {
-                return 1;
-              }
-              return 0;
-            });
-            console.log("Sorted data is ", sorted);
+            // var sorted = playerGamesListData.response.games.sort(function (
+            //   productA,
+            //   productB
+            // ) {
+            //   if (productA.playtime_forever > productB.playtime_forever) {
+            //     return -1;
+            //   }
+            //   if (productB.playtime_forever > productA.playtime_forever) {
+            //     return 1;
+            //   }
+            //   return 0;
+            // });
+            // console.log("Sorted data is ", sorted);
             //top 5
-            for (let i = 0; i < playerGamesListData.length; i++) {
-              if (playerGamesListData[4]) {
-                playerGamesListData[4]++;
-              }
-              return playerGamesListData[4];
-            }
-            console.log(playerGamesListData[4]);
-            // this player is online
+            // for (let i = 0; i < playerGamesListData.length; i++) {
+            //   if (playerGamesListData[4]) {
+            //     playerGamesListData[4]++;
+            //   }
+            //   return playerGamesListData[4];
+            // }
+            // console.log(playerGamesListData[4]);
+            // this player is online+
+            // user info
             var display = document.getElementById ("player")
   display.innerHTML = `<p>This player is ${updatedState}</p>
                       <p>Player Name: ${personaNameEl}
@@ -113,8 +121,9 @@ var steamAPI = (playerSummary) => {
         console.error(error);
       });
   };
-  
-  steamAPI();
+  var button = document.getElementById("loginBtn")
+  button.addEventListener("click", Login)
+  // steamAPI();
   
 //   var searchBtn = document.getElementsByClassName("btn");
 //   console.log("btn", searchBtn[0]);
