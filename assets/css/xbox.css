@@ -72,14 +72,11 @@ ul li:hover a {
 	margin-left: 0px;
 	letter-spacing: 4px;
 }
-.steam-icon {
-	size-adjust: 50%;
-	align-items: center;
-}
+
 /* Hero Section */
 .hero {
 	text-align: center;
-	background: linear-gradient(#00adee, #0079b6);
+	background: linear-gradient(#0e7a0d, black);
 	padding-top: 150px;
 	padding-bottom: 150px;
 }
@@ -207,8 +204,8 @@ footer .footer_column p {
 .cards {
 	width: 60%;
 	height: auto;
-	max-width: 600px;
-	max-height: 500px;
+	max-width: 400px;
+	max-height: 300px;
 	flex-wrap: wrap
 }
 footer .footer_column p {
