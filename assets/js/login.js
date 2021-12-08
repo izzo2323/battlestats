@@ -12,7 +12,7 @@ function Login(e) {
   } 
   else{
     localStorage.setItem("Username", Username)
-      window.location.assign("./index.html")
+      window.location.assign("./homepage.html")
   }
 }
 var button = document.getElementById("loginBtn")
