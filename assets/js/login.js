@@ -11,6 +11,7 @@ function Login(e) {
     document.getElementById("error").innerText = "Password Must Be 8 Characters"
   } 
   else{
+    localStorage.setItem("Username": Username)
       window.location.assign("./index.html")
   }
 }
