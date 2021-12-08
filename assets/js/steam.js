@@ -6,6 +6,7 @@ function Login(e){
 }
 var steamAPI = (playerSummary) => {
   // preston steamkey 76561199006162307
+  // tanners teamkey  76561198012252310
     // var steamKey = "4F3B76E047AA7DDB2C31FE9E7A61DD0E";
     // var userID = "76561198024405122"; //temp changes
   
