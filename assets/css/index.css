@@ -1,5 +1,10 @@
 @charset "UTF-8";
 /* Body */
+
+.factapi {
+	text-align: center;
+}
+
 body {
 	font-family: source-sans-pro;
 	background-color: #240046;

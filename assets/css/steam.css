@@ -1,5 +1,9 @@
 @charset "UTF-8";
 /* Body */
+
+.playerinfo {
+	text-align: center;
+}
 body {
 	font-family: source-sans-pro;
 	background-color: black;
