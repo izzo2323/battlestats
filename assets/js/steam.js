@@ -124,6 +124,35 @@ var steamAPI = (playerSummary) => {
   };
   var button = document.getElementById("loginBtn")
   button.addEventListener("click", Login)
+  
+// Random Fact API
+var fact = document.getElementById("fact")
+ fact.addEventListener("click", function (event) {
+  // Checking if the button was clicked
+  // if (!event.target.matches("#button")) return;
+  JokeAPI.getJokes()
+  .then((res) => res.json())
+  .then((data) => {
+    console.log(data)
+    renderJoke(data)
+  })
+  // fetch("https://dad-jokes.p.rapidapi.com/random/joke", {
+  //   headers: {
+  //     'x-rapidapi-key': 'ee4e3be362mshbdb524da36c209ap'
+  //   }
+  // })
+  //   .then((response) => response.json())
+  //   .then((data) => {console.log(data) 
+  //     renderJoke(data)})
+});
+
+function renderJoke(data) {
+  const setup = document.getElementById("setup");
+  const punchline = document.getElementById("punchline");
+  setup.innerHTML = data?.setup|| data?.joke;
+  punchline.innerHTML = data?.delivery|| null;
+}
+
   // steamAPI();
   
 //   var searchBtn = document.getElementsByClassName("btn");
