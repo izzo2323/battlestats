@@ -2,7 +2,7 @@
 /* Body */
 body {
 	font-family: source-sans-pro;
-	background-color: #240046;
+	background-color: black;
 	margin-top: 0px;
 	margin-right: 0px;
 	margin-bottom: 0px;
@@ -21,7 +21,7 @@ body {
 header {
 	width: 100%;
 	height: 5%;
-	background-color: #3C096C;
+	background-color: black;
 	border-bottom: 1px solid #2C9AB7;
 }
 .logo {
@@ -63,7 +63,8 @@ ul li:hover a {
 	color: #9D4EDD;
 }
 .hero_header {
-	color: #FFFFFF;
+	font-family: Arial, Helvetica, sans-serif;
+	color: black;
 	text-align: center;
 	margin-top: 0px;
 	margin-right: 0px;
@@ -71,9 +72,14 @@ ul li:hover a {
 	margin-left: 0px;
 	letter-spacing: 4px;
 }
+.steam-icon {
+	size-adjust: 50%;
+	align-items: center;
+}
 /* Hero Section */
 .hero {
-	background: linear-gradient(#5A189A, #3C096C);
+	text-align: center;
+	background: linear-gradient(#00adee, #0079b6);
 	padding-top: 150px;
 	padding-bottom: 150px;
 }
@@ -201,8 +207,8 @@ footer .footer_column p {
 .cards {
 	width: 60%;
 	height: auto;
-	max-width: 300px;
-	max-height: 200px;
+	max-width: 600px;
+	max-height: 500px;
 	flex-wrap: wrap
 }
 footer .footer_column p {
