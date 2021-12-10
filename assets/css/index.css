@@ -224,6 +224,7 @@ footer .footer_column p {
 	max-height: 200px;
 	flex-wrap: wrap
 }
+
 footer .footer_column p {
 	padding-left: 30px;
 	padding-right: 30px;
@@ -512,4 +513,8 @@ nav ul li {
 	
 	
 
+}
+.factapi {
+	
+	align-items: right;
 }
