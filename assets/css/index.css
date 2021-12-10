@@ -41,6 +41,7 @@ header {
 	letter-spacing: 4px;
 	font-family: paladins;
 }
+
 nav {
 	float: right;
 	width: 50%;
@@ -183,8 +184,20 @@ ul li:hover a {
 }
 
 .platformicons {
-	text-align: center;
+	align-items: space-between;
+	display: flex;
+	width: 350px;
+	justify-content: space-between;
+
 }
+
+/* .xboxicon {
+	overflow: wrap;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 200px;
+	display: flex; */
+/* } */
 /* More info */
 footer {
 	background-color: #FFFFFF;
