@@ -29,11 +29,12 @@ header {
 	background-color: #3C096C;
 	border-bottom: 1px solid #2C9AB7;
 }
+
 .logo {
 	color: #FF8500;
 	font-weight: bold;
 	text-align: center;
-	width: 10%;
+	width: 25%;
 	float: left;
 	margin-top: 15px;
 	margin-left: 25px;
