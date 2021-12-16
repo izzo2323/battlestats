@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Xbox</title>
+    <link href="assets/css/xbox.css" rel="stylesheet" type="text/css" />
+    <!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
+    <script>
+      var __adobewebfontsappname__ = "dreamweaver";
+    </script>
+    <scriptslsrc="http://use.edgefonts.net/source-sans-pro:n2:default.js"
+      type="text/javascript"
+    ></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!-- Main Container -->
+<div class="container"> 
+  <!-- Navigation -->
+  <header> <a href="./homepage.html">
+    <img class="logo" a href="homepage.html" src="./assets/images/battlestats_logo.svg">
+    <!-- <h4 style="font-family:paladinslaser;" class="logo">BattleStats&nbsp;</h4> -->
+    </a>
+    <nav>
+      <ul>
+        <li><a href="./steam.html">STEAM</a></li>
+        <li><a href="./playstation.html">PLAYSTATION</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <img src="./assets/images/xbox-logo.svg" alt="xbox Logo" class="cards" >
+
+    <!-- <h2 class="hero_header">Steam</h2> -->
+    <p class="tagline">one site for all of your gaming stats&nbsp; &nbsp;</p>
+  </section>
+<h3>New Users, Click <a target="_blank" href="https://cors-anywhere.herokuapp.com/corsdemo">this </a>link and hit 'Request temporary access to the demo server' before continuing</h3>
+
+<!-- User Input for API -->
+<div class="form" id="login">
+  <form >
+    <label for="Username"> Enter XBOX Gamertag</label>
+    <input type="text" placeholder="XBOX Gamertag" name="username" id="Username" class="login-input">
+    <!-- get element.id -->
+        <p id="error"></p>
+        <button id="loginBtn" class="login-input" type="submit">Login
+        </button>
+    </form>
+</div>
+<h4 class="body">PLAYER INFO</h4>
+<!-- create button for temporary access to api
+https://cors-anywhere.herokuapp.com/corsdemo
+<a target="_blank" href="https://cors-anywhere.herokuapp.com/corsdemo"> -->
+
+  <section id="player"></section>
+  <!-- About Section -->
+  <!-- Stats Gallery Section -->
+  <!-- Parallax Section -->
+  <!-- More Info Section -->
+  <footer>
+<article class="footer_column"></article>
+</footer>
+
+  <!-- <h3>PLATFORMS</h3>
+  <div class="platformicons"><img src="assets/images/xbox-logo.svg" alt="" class="cards"/>
+    <img src="assets/images/steam-icon.svg" alt="" class="cards"/>
+    <img src="assets/images/playstation-icon.svg" alt="" class="cards"/></div>  -->
+  <!-- Footer Section 
+  <section class="footer_banner" id="contact">
+    <h2 class="hidden">Footer Banner Section </h2>
+    <p class="hero_header">LOG IN&nbsp;</p>
+    <div class="button">sign up</div>
+  </section>
+-->
+      <!-- Copyrights Section -->
+      <div class="copyright">
+        &copy;2021- <strong>Battlestats&nbsp;</strong>
+      </div>
+    </div>
+  </footer>
+  <script src="./assets/js/steam.js"></script>
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Main Container Ends -->
+  </body>
+</html>
+
